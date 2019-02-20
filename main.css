@@ -1,0 +1,131 @@
+/*Grid lay out*/
+.header { grid-area: header; }
+.ad1 { grid-area: ad1; }
+.ad2 { grid-area: ad2; }
+.ad3 { grid-area: ad3; }
+
+body{
+  display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-areas: 
+         "header header header"
+         "ad1 ad2 ad3"; 
+ }
+
+  /*Tablet*/
+ @media (min-width: 481px) and (max-width: 768px) {  
+     body{
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+       grid-template-areas: 
+             "header header header header"
+             "ad1 ad1 ad3 ad3"
+             "ad2 ad2 ad2 ad2"; 
+     }
+ }
+/*Einde tablet*/
+
+/*Mobiel L*/
+@media (min-width: 0px) and (max-width: 480px) {
+     body{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: 
+        "header header header"
+         "ad1 ad1 ad1"
+         "ad2 ad2 ad2"
+         "ad3 ad3 ad3"; 
+     }
+ }
+ /*Einde mobiel L*/
+
+ /*einde grid lay-out*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, 
+*:before,
+*:after{
+    box-sizing: inherit;
+            }
+
+header {
+    background-color: black;
+    padding: 10px 1px 10px 40px;
+}
+
+body {
+    background: #333333;
+    color: #777;
+    font-family: Avenir, Arial, sans-serif;
+    margin: 0;
+    background-color: #333333;
+    color: #868686;
+}
+
+/*Vakken waarin de datavisualisatie in staan*/
+.box {
+  padding: 25px 25px; 
+}
+
+/*Cirkel: Voorraden*/
+.radialbox {
+    max-height: 333px;
+    margin-bottom: 60px;
+}
+
+/*Logo*/
+.logo {
+    width: 20%;
+}
+
+/*Balk waarin de logo in staat*/
+header {
+    background-color: black;
+    padding: 10px 1px 10px 40px;
+}
+
+/*Ruimte tussen de vakken*/
+aside {
+    margin-left: 15px;
+}
+
+/*Formaat Laptop*/
+@media (min-width: 769px) and (max-width: 1024px) {  
+    .box {
+        padding: 15px 15px; 
+    }
+
+    .logo {
+        width: 30%;
+    }
+}
+/*Einde laptop*/
+
+/*Tablet*/
+@media (min-width: 481px) and (max-width: 768px) {  
+    .logo {
+        width: 30%;
+    }
+    
+    header {
+        padding-left: 30px;
+    }
+}
+/*Einde tablet*/
+
+/*Mobiel L*/
+@media (min-width: 0px) and (max-width: 480px) {
+    .logo {
+        width: 50%;
+    }
+
+    header {
+        padding: 10px 0px 5px 15px;
+    }
+
+}
+
+/*Einde mobiel L*/
