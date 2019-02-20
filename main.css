@@ -1,0 +1,157 @@
+/*Grid lay out*/
+            .header { grid-area: header; }
+            .ad1 { grid-area: ad1; }
+            .ad2 { grid-area: ad2; }
+            .ad3 { grid-area: ad3; }
+
+
+            body{
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              grid-template-areas: 
+                    "header header header"
+                    "ad1 ad2 ad3"; 
+            }
+
+            /*Tablet*/
+            @media (min-width: 481px) and (max-width: 768px) {  
+                body{
+                  display: grid;
+                  grid-template-columns: 1fr 1fr 1fr 1fr;
+                  grid-template-areas: 
+                        "header header header header"
+                        "ad1 ad1 ad3 ad3"
+                        "ad2 ad2 ad2 ad2"; 
+                }
+            }
+            /*Einde tablet*/
+
+            /*Mobiel L*/
+            @media (min-width: 0px) and (max-width: 480px) {
+                 body{
+                  display: grid;
+                  grid-template-columns: 1fr 1fr 1fr;
+                  grid-template-areas: 
+                        "header header header"
+                        "ad1 ad1 ad1"
+                        "ad2 ad2 ad2"
+                        "ad3 ad3 ad3"; 
+                }
+            }
+            /*Einde mobiel L*/
+
+            /*einde grid lay-out*/
+
+            html {
+                box-sizing: border-box;
+            }
+
+            *, 
+            *:before,
+            *:after{
+                box-sizing: inherit;
+            }
+
+            header {
+                background-color: black;
+                padding: 10px 1px 10px 40px;
+            }
+
+            body {
+              background: #333333;
+              color: #777;
+              font-family: Avenir, Arial, sans-serif;
+              margin: 0;
+              background-color: #333333;
+              color: #868686;
+            }
+
+            .body-bg {
+              background: #F3F4FA !important;
+            }
+
+            h1, h2, h3, h4, h5, h6, strong {
+              font-weight: 600;
+            }
+
+            .box .apexcharts-xaxistooltip {
+              background: #1B213B;
+              color: #fff;
+            }
+
+            .content-area {
+              max-width: 1280px;
+              margin: 0 auto;
+            }
+
+            .box {
+              padding: 25px 25px; 
+            }
+
+            .columnbox {
+              padding-right: 15px;
+            }
+            .radialbox {
+              max-height: 333px;
+              margin-bottom: 60px;
+            }
+
+            .apexcharts-legend-series tspan:nth-child(3) {
+              font-weight: bold;
+              font-size: 20px;
+            }
+
+            .logo {
+                width: 20%;
+            }
+
+            header {
+                background-color: black;
+                padding: 10px 1px 10px 40px;
+            }
+
+            aside {
+                margin-left: 15px;
+            }
+
+
+            /*Laptop*/
+            @media (min-width: 769px) and (max-width: 1024px) {  
+                .box {
+                padding: 15px 15px; 
+                }
+
+                .logo {
+                    width: 30%;
+                }
+
+            }
+            /*Einde laptop*/
+
+            /*Tablet*/
+            @media (min-width: 481px) and (max-width: 768px) {  
+
+                .logo {
+                    width: 30%;
+                }
+
+                header {
+                    padding-left: 30px;
+                }
+
+            }
+            /*Einde tablet*/
+
+            /*Mobiel L*/
+            @media (min-width: 0px) and (max-width: 480px) {
+                .logo {
+                    width: 50%;
+                }
+
+                header {
+                    padding: 10px 0px 5px 15px;
+                }
+
+            }
+
+            /*Einde mobiel L*/
